@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+</head>
+
+
+<body>
+	<a href='/'>Get some Images</a>
+
+	<center>
+		<h1>Weather by Location</h1>
+
+		<form action="/weather" method="post">
+		    <input name="location" type="text" placeholder="Enter Location Here" required>
+		    <input id="submit" type="submit" value="Search">
+	    </form>
+
+	    {{#if returned}}
+	    <h2>The weather is {{icon}}</h2>
+
+	    <img src="{{icon}}.png">
+	    {{/if}}
+
+	</center>
+
+
+</body>
+
+
+</html>
